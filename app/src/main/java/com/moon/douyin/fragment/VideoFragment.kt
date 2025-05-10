@@ -2,7 +2,6 @@ package com.moon.douyin.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import com.moon.douyin.databinding.FragmentVideoBinding
@@ -29,20 +28,14 @@ class VideoFragment : BaseFragment<FragmentVideoBinding>() {
         super.initView()
         val url = arguments?.getString("url") ?: ""
         viewBinding.videoPlayer.apply {
-            backButton.visibility = View.GONE
-            titleTextView.visibility = View.GONE
-            fullscreenButton.visibility = View.GONE
-            isNeedShowWifiTip = false
-            setIsTouchWiget(false)
             isLooping = true
-            dismissControlTime = 0
         }
         viewBinding.videoPlayer.setUp(url, true, "测试视频")
     }
 
     override fun onResume() {
         super.onResume()
-        viewBinding.videoPlayer.onVideoResume(false)
+        viewBinding.videoPlayer.onVideoResume()
         viewBinding.videoPlayer.startPlayLogic()
     }
 
