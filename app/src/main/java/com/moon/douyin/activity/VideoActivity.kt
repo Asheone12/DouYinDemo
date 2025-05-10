@@ -6,6 +6,7 @@ import com.moon.douyin.databinding.ActivityVideoBinding
 class VideoActivity : BaseActivity<ActivityVideoBinding>() {
     private lateinit var mPagerAdapter: ItemViewPagerAdapter
     private val urlList = mutableListOf(
+        "https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/flv/xgplayer-demo-360p.flv",
         "https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4",
         "https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218093206z8V1JuPlpe.mp4",
         "https://stream7.iqilu.com/10339/article/202002/18/2fca1c77730e54c7b500573c2437003f.mp4",
